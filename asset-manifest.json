@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/wiwitime/static/css/main.38007c83.css",
-    "main.js": "/wiwitime/static/js/main.74ead38d.js",
+    "main.js": "/wiwitime/static/js/main.dc53784d.js",
     "index.html": "/wiwitime/index.html",
     "main.38007c83.css.map": "/wiwitime/static/css/main.38007c83.css.map",
-    "main.74ead38d.js.map": "/wiwitime/static/js/main.74ead38d.js.map"
+    "main.dc53784d.js.map": "/wiwitime/static/js/main.dc53784d.js.map"
   },
   "entrypoints": [
     "static/css/main.38007c83.css",
-    "static/js/main.74ead38d.js"
+    "static/js/main.dc53784d.js"
   ]
 }
