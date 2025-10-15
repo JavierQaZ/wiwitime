@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [startTimestamp] = useState(1650846300000);
+  const [startTimestamp] = useState(1650849900000);
   const [elapsed, setElapsed] = useState({
     days: 0,
     hours: 0,
