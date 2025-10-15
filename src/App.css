@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Courier New', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: #222222;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.timer-container {
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.timer-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff00b3;
+  margin-bottom: 30px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.timer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.timer-unit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.timer-value {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #76458d;
+  background: linear-gradient(90deg, #00eaff 0%, #76458d 25%, #ff00b3 50%, #00eaff 75%, #76458d 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  animation: gradientShift 1s linear infinite;
+  text-align: right;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 0%;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+.timer-label {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .timer-container {
+    padding: 30px 20px;
+  }
+
+  .timer-title {
+    font-size: 2rem;
+  }
+
+  .timer-grid {
+    gap: 12px;
+  }
+
+  .timer-value {
+    font-size: 2.5rem;
+  }
+
+  .timer-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 15px;
+  }
+
+  .timer-container {
+    padding: 25px 15px;
+    border-radius: 15px;
+  }
+
+  .timer-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .timer-grid {
+    gap: 10px;
+  }
+
+  .timer-value {
+    font-size: 2.2rem;
+  }
+
+  .timer-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .timer-value {
+    font-size: 1.8rem;
+  }
+
+  .timer-label {
+    font-size: 0.7rem;
   }
 }
